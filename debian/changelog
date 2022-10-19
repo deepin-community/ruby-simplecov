@@ -1,0 +1,121 @@
+ruby-simplecov (0.19.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Marc Dequènes (Duck) ]
+  * NUR:
+    + removed 'dont-mess-with-the-load-path' patch, not needed anymore
+  * Bump debhelper compat level to 13.
+
+ -- Marc Dequènes (Duck) <Duck@DuckCorp.org>  Tue, 10 Nov 2020 15:18:25 +0900
+
+ruby-simplecov (0.18.5-1) unstable; urgency=medium
+
+  * New upstream version 0.18.5
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+  * Drop compat file, rely on debhelper-compat and bump compat level to 12
+  * Update name in uploaders
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 11 Mar 2020 18:48:56 +0530
+
+ruby-simplecov (0.18.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Marc Dequènes (Duck) ]
+  * New upstream version 0.18.1:
+    + adapted patch.
+
+ -- Marc Dequènes (Duck) <Duck@DuckCorp.org>  Sat, 08 Feb 2020 01:29:35 +0900
+
+ruby-simplecov (0.16.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.16.1
+  * Bump debhelper compatibility level to 11
+  * Declare compliance with Debian Policy 4.1.5
+  * Update VCS urls to point to salsa
+  * debian/control: use https:// instead of http:// in Homepage field
+  * Update years of upstream copyright
+  * debian/copyright: use https:// in Format and Source fields
+  * Update patches
+  * debian/watch: use gemwatch.debian.net
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Sun, 22 Jul 2018 05:34:56 -0300
+
+ruby-simplecov (0.14.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Cédric Boutillier ]
+  * Use https:// in Vcs-* fields
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+
+  [ Lucas Nussbaum ]
+  * New upstream version 0.14.1.
+
+  [ Unit 193 ]
+  * Bump Standards-Version to 4.0.0.
+  * Refresh patch.
+
+  [ Lucas Nussbaum ]
+  * Refresh packaging using dh-make-ruby.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Sun, 09 Jul 2017 07:44:18 +0200
+
+ruby-simplecov (0.11.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/patches/dont-mess-with-the-load-path.patch: avoid modifying the
+    $LOAD_PATH. This fixes using simplecov against a local repository of a
+    project that is also installed as a Debian package.
+  * drop debian/patches/ignore-simplecov-html
+    - re-added dependency on ruby-simplecov-html
+  * Update packaging with a new dh-make-ruby run
+   - upstream switched to rspec; dropping build dependencies on minitest and
+     shoulda
+  * Refresh patches
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 14 Dec 2015 10:44:20 -0200
+
+ruby-simplecov (0.10.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #768957)
+  * Refresh patches
+    - debian/patches/ignore-simplecov-html: improved to not try using
+      simplecov-html at all, and use a simple text formatted instead
+      (Closes: #770225)
+    - add debian/patches/skip-broken-test.patch
+    - add debian/patches/fix-test-suite.patch
+  * Update packaging with a new dh-make-ruby run
+  * debian/control: Build-Depends: ruby-minitest, ruby-rspec
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 15 Sep 2015 12:14:53 -0300
+
+ruby-simplecov (0.7.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Break dependency cycle with simplecov-html (Closes: #723199)
+  * Bump Standards-Version to 3.9.5 (no changes)
+  * Update Build-Depends for ruby2.0, drop ruby1.8 support.
+    While simplecov's own tests don't seem to run on 2.0, running tests
+    of other packages works (or at least, doesn't break).
+  * Fix test failure due to encoding test (from upstream)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Tue, 24 Dec 2013 00:04:53 +0100
+
+ruby-simplecov (0.7.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #691450)
+
+ -- Praveen Arimbrathodiyil <praveen@debian.org>  Thu, 23 May 2013 12:11:38 +0530
